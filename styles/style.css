@@ -1,0 +1,458 @@
+/* ----------------------------- MAIN STYLES ----------------------------- */
+
+html {
+	height: 100%;
+}
+
+body {
+	/* margin: 5px; */
+	font-family: Arial;
+	display: grid;
+	min-height: 100%;
+	grid-template-columns: auto;
+	grid-template-rows: 1fr auto;
+	/* gap: 0.5em; */
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
+
+header {
+	height: 30px;
+	background-color: black;
+	/* position: fixed;
+	width: 100%; */
+}
+
+main {
+	min-height: 40rem;
+	background-color: red;
+}
+
+footer {
+	position: relative;
+	background-color: black;
+	min-height: 100px;
+	color: white;
+	text-align: center;
+}
+
+.section {
+	/* border: 1px solid black; */
+	/* border-radius: 10px; */
+	padding: 30px;
+}
+
+/* ----------------------------- NAVBAR STYLES ----------------------------- */
+
+li {
+	list-style-type: none;
+	font-size: 1.3em;
+	color: #fff;
+	height: 50px;
+	padding: 20px;
+	margin-bottom: 40px;
+	line-height: 1.5rem;
+	border-bottom: 1px solid white;
+	/* border-right: 1px solid white; */
+}
+
+li:hover {
+	background-color: red;
+	border-bottom: 1px solid;
+}
+
+.current {
+	background-color: red;
+	text-decoration: underline;
+	color: black;
+}
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	font-family: Arial;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+nav {
+	width: 100%;
+}
+
+/* nav {
+	position: fixed;
+	text-align: center;
+} */
+
+/* .hidden {
+	margin-left: auto;
+} */
+
+@keyframes hoverLi {
+	0% {
+		transform: translateY(-20px);
+	}
+
+	100% {
+		transform: translate(0)
+	}
+}
+
+@media screen and (min-width: 850px) {
+	li {
+		font-size: 2em;
+		padding-bottom: 30px;
+		/* margin: 30px; */
+	}
+
+	li:hover {
+		animation: hoverLi 0.5s;
+	}
+
+	.navbar {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		font-family: Arial;
+		border-right: 1px solid white;
+	}
+
+	nav {
+		position: fixed;
+	}
+}
+
+/* ------------------------------ MAIN STYLES ------------------------------ */
+
+.front-img {
+	background-image: url("https://images.wsj.net/im-53968?width=620&size=1.5");
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* border: 1px solid black; */
+	width: 100%;
+	height: 300px;
+	padding: 0;
+	margin: 0;
+}
+
+.music-img {
+	width: 100%;
+}
+
+img {
+	border-radius: 50px;
+}
+
+.primary-img {
+	animation: comeIn 1s ease-out;
+	margin: 0;
+	width: 100%;
+}
+
+@media screen and (min-width: 850px) {
+	.primary-img {
+		width: 600px;
+		height: 600px;
+	}
+
+	.description {
+		/* border: 1px solid black; */
+		border-right: 1px solid black;
+		width: 100%;
+		text-align: center;
+		font-family: Arial;
+	}
+
+	.fashion-description {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		/* border: 1px solid black; */
+	}
+}
+
+@media screen and (max-width: 375px) {
+	img {
+		width: 300px !important;
+	}
+
+	.card {
+		width: 300px;
+		border: 1px solid black;
+		display: block;
+		border-radius: 5px;
+		background-color: black;
+	}
+
+
+}
+
+.main-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0;
+	/* padding: 0; */
+}
+
+.description {
+	width: 100%;
+	text-align: center;
+	font-family: Arial;
+}
+
+h1 {
+	font-size: 2rem;
+	text-align: center;
+	margin: 30px;
+	letter-spacing: 2px;
+	animation: moveInLeft 1s ease-out;
+}
+
+@keyframes comeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+
+	80% {
+		transform: translateY(-10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0)
+	}
+}
+
+@keyframes moveInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+
+	80% {
+		transform: translateX(10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0)
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	h1 {
+		animation-name: disable;
+	}
+
+	.primary-img {
+		animation-name: disable;
+	}
+
+	.card img {
+		transition: none;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	}
+
+	/* .card img:hover {
+		margin-bottom: 0;
+		transform: none;
+		transition: none;
+	} */
+	li:hover {
+		animation-name: disable;
+	}
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin: 20px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 1rem;
+	margin: 20px;
+	text-align: center;
+}
+
+p {
+	line-height: 1.5rem;
+	margin: 10px;
+}
+
+.gallery {
+	/* border: 1px solid black; */
+	display: flex;
+	/* flex-direction: column; */
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.card {
+	border: 1px solid white;
+	width: 500px;
+	display: block;
+	border-radius: 5px;
+	background-color: black;
+}
+
+.card img {
+	width: 200px;
+	height: 200px;
+	margin-left: 150px;
+	margin-top: 20px;
+	transition: all 1s;
+}
+
+.card img:hover {
+	transform: scale(1.1);
+	margin-bottom: 20px;
+	border: 5px solid black;
+}
+
+.img-description {
+	text-align: center;
+	font-family: Arial;
+	display: block;
+	color: white;
+}
+
+.art-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.art-gallery img {
+	border-radius: 0px;
+	transition: all 1s;
+}
+
+/* .art-img img:hover {
+	margin: 20px;
+	transform: scale(1.1);
+} */
+
+.fashion-card {
+	background-color: black;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	/* width: 500px; */
+}
+
+.fashion-card img {
+	width: 300px;
+	height: 300px;
+	border-radius: 5px;
+}
+
+.fashion-card h2 {
+	/* background-color: red; */
+	color: white;
+}
+
+/* -------------------------------- FLIPCARD ------------------------------- */
+
+.flip-card {
+	margin: 20px;
+}
+
+.flip-card-inner {
+	position: relative;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+/* .flip-card-front,
+.flip-card-back {
+	position: absolute;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+} */
+
+.flip-card-back {
+	background-color: black;
+	color: white;
+	transform: rotateY(180deg);
+	width: 100%;
+	height: 100px;
+	border: 1px solid black;
+	backface-visibility: hidden;
+	/* position: absolute; */
+}
+
+.gallery .flip-card {
+	/* width: 300px;
+	height: 200px; */
+	perspective: 1000px;
+}
+
+.gallery .flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.gallery .flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+	/* backface-visibility: hidden; */
+}
+
+.gallery .flip-card-front .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+.gallery .flip-card-back {
+	background-color: black;
+}
+
+@media screen and (min-width: 850px) {
+	.art-img img:hover {
+		margin: 20px;
+		transform: scale(1.1);
+	}
+
+	.flip-card-inner {
+		transform-style: none;
+	}
+
+	.flip-card:hover .flip-card-inner {
+		transform: none;
+	}
+
+}
+
+
+.parallex-test {
+	/* background-image: "../img/fashion_boys.jpg"; */
+	background-image: url("https://i.pinimg.com/originals/db/e9/6f/dbe96f6874e98430a1fbccb51d6af9ec.jpg");
+	height: 600px;
+	width: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	/* background-size: cover; */
+	background-position: center;
+	border-radius: 100px;
+}
+
+/* ----------------------------- FOOTER STYLES ----------------------------- */
