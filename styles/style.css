@@ -65,7 +65,8 @@ li:hover {
 
 .current {
 	background-color: red;
-	text-decoration: underline;
+	/* text-decoration: underline; */
+	font-weight: bold;
 	color: black;
 }
 
