@@ -308,6 +308,7 @@ p {
 	display: block;
 	border-radius: 5px;
 	background-color: black;
+	color: white;
 }
 
 .card img {
@@ -404,19 +405,77 @@ label:hover {
 	cursor: pointer;
 }
 
+#video-fashion {
+	margin-bottom: 60px;
+}
+
+
 /* -------------------------------- FLIPCARD ------------------------------- */
 
 .flip-card {
-	margin: 20px;
+	background-color: transparent;
+	width: 300px;
+	height: 200px;
+	/* border: 1px solid #f1f1f1; */
+	perspective: 1000px;
+	/* margin: 300px; */
+	margin-bottom: 300px;
+	margin-right: 300px;
 }
 
 .flip-card-inner {
 	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
 	transition: transform 0.8s;
 	transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.flip-card-front {
+	/* background-color: #bbb; */
+	color: black;
+}
+
+.flip-card-back {
+	background-color: black;
+	color: white;
+	transform: rotateY(180deg);
+	width: 500px;
+	height: 350px;
+	/* height: 100%; */
+	border-radius: 50px;
+	margin-right: 300px;
+}
+
+/* .flip-card {
+	margin: 20px;
+	background-color: transparent;
+}
+
+.flip-card-inner {
+	position: relative;
+	transition: transform 1.5s;
+	transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+.flip-card:focus {
 	transform: rotateY(180deg);
 }
 
@@ -427,50 +486,52 @@ label:hover {
 	-webkit-backface-visibility: hidden;
 } */
 
-.flip-card-back {
+/* .flip-card-back {
 	background-color: black;
 	color: white;
 	transform: rotateY(180deg);
-	/* width: 100%; */
+	width: 100%;
 	height: 100px;
 	border: 1px solid black;
 	backface-visibility: hidden;
 	position: absolute;
-}
+} */
 
-.gallery .flip-card {
+/* .gallery .flip-card {
 	/* width: 300px;
 	height: 200px; */
-	perspective: 1000px;
+	/* perspective: 1000px; 
 }
+*/
 
-.gallery .flip-card-inner {
+/* .gallery .flip-card-inner {
 	position: relative;
-	/* width: 100%; */
+	width: 100%;
 	height: 100%;
 	text-align: center;
 	transition: transform 0.8s;
 	transform-style: preserve-3d;
-}
+} */
 
-.gallery .flip-card:hover .flip-card-inner {
+/* .gallery .flip-card:hover .flip-card-inner {
 	transform: rotateY(180deg);
-	/* backface-visibility: hidden; */
-}
+	/* backface-visibility: hidden; 
+}*/
 
-.gallery .flip-card-front .flip-card-back {
-	position: absolute;
+/* .gallery .flip-card-front .flip-card-back { 
+	position: absolute; */
 	/* width: 100%; */
-	height: 100%;
+	/* height: 100%;
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
-}
+} */
 
-.gallery .flip-card-back {
+/* .gallery .flip-card-back {
 	background-color: black;
-}
+} */
 
-@media screen and (min-width: 850px) {
+
+/* @media screen and (min-width: 850px) {
 	.art-img img:hover {
 		margin: 20px;
 		transform: scale(1.1);
@@ -484,7 +545,7 @@ label:hover {
 		transform: none;
 	}
 
-}
+} */
 
 /* -------------------------------- PARALLEX ------------------------------- */
 
