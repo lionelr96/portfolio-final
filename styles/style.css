@@ -412,7 +412,7 @@ label:hover {
 
 /* -------------------------------- FLIPCARD ------------------------------- */
 
-.flip-card {
+.flip-card2 {
 	background-color: transparent;
 	width: 300px;
 	height: 200px;
@@ -423,7 +423,7 @@ label:hover {
 	margin-right: 300px;
 }
 
-.flip-card-inner {
+.flip-card-inner2 {
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -432,11 +432,11 @@ label:hover {
 	transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-card2:hover .flip-card-inner2 {
 	transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front2, .flip-card-back2 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -444,12 +444,12 @@ label:hover {
 	backface-visibility: hidden;
 }
 
-.flip-card-front {
+.flip-card-front2 {
 	/* background-color: #bbb; */
 	color: black;
 }
 
-.flip-card-back {
+.flip-card-back2 {
 	background-color: black;
 	color: white;
 	transform: rotateY(180deg);
@@ -457,10 +457,12 @@ label:hover {
 	height: 350px;
 	/* height: 100%; */
 	border-radius: 50px;
-	margin-right: 300px;
+	margin-right: 600px;
 }
 
-/* .flip-card {
+
+
+.flip-card {
 	margin: 20px;
 	background-color: transparent;
 }
@@ -479,14 +481,14 @@ label:hover {
 	transform: rotateY(180deg);
 }
 
-/* .flip-card-front,
+.flip-card-front,
 .flip-card-back {
 	position: absolute;
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
-} */
+}
 
-/* .flip-card-back {
+.flip-card-back {
 	background-color: black;
 	color: white;
 	transform: rotateY(180deg);
@@ -494,44 +496,44 @@ label:hover {
 	height: 100px;
 	border: 1px solid black;
 	backface-visibility: hidden;
-	position: absolute;
-} */
-
-/* .gallery .flip-card {
-	/* width: 300px;
-	height: 200px; */
-	/* perspective: 1000px; 
+	/* position: absolute; */
 }
-*/
 
-/* .gallery .flip-card-inner {
+.gallery .flip-card {
+	width: 300px;
+	height: 200px;
+	perspective: 1000px; 
+}
+
+
+.gallery .flip-card-inner {
 	position: relative;
 	width: 100%;
 	height: 100%;
 	text-align: center;
 	transition: transform 0.8s;
 	transform-style: preserve-3d;
-} */
+}
 
-/* .gallery .flip-card:hover .flip-card-inner {
+.gallery .flip-card:hover .flip-card-inner {
 	transform: rotateY(180deg);
-	/* backface-visibility: hidden; 
-}*/
+	backface-visibility: hidden; 
+}
 
-/* .gallery .flip-card-front .flip-card-back { 
-	position: absolute; */
-	/* width: 100%; */
-	/* height: 100%;
+.gallery .flip-card-front .flip-card-back { 
+	/* position: absolute; */
+	width: 100%;
+	height: 100%;
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
-} */
+}
 
-/* .gallery .flip-card-back {
+.gallery .flip-card-back {
 	background-color: black;
-} */
+}
 
 
-/* @media screen and (min-width: 850px) {
+@media screen and (min-width: 850px) {
 	.art-img img:hover {
 		margin: 20px;
 		transform: scale(1.1);
@@ -545,7 +547,7 @@ label:hover {
 		transform: none;
 	}
 
-} */
+}
 
 /* -------------------------------- PARALLEX ------------------------------- */
 
