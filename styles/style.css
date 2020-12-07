@@ -308,6 +308,7 @@ p {
 	display: block;
 	border-radius: 5px;
 	background-color: black;
+	color: white;
 }
 
 .card img {
