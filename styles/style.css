@@ -536,10 +536,11 @@ label:hover {
 		transform: rotateY(180deg);
 	} */
 
-	.scene {
+	/* New test */
+
+	/* .scene {
 		width: 600px;
 		height: 600px;
-		perspective: 600px;
 	}
 
 	.front-card {
@@ -559,10 +560,8 @@ label:hover {
 	}
 
 	.card__face--back {
-		/* background-color: blue; */
 		height: 600px;
 		width: 600px;
-		/* background-image: url('/img/mlk2.jpg'); */
 		transform: rotateY(180deg);
 	}
 
@@ -576,6 +575,66 @@ label:hover {
 	}
 
 	.scene:focus-within {
+		transform: rotateY(180deg);
+	} */
+
+	.fliip-card {
+		background-color: transparent;
+		width: 600px;
+		height: 700px;
+		perspective: 1000px;
+		/* Remove this if you don't want the 3D effect */
+	}
+
+
+	/* This container is needed to position the front and back side */
+
+	.fliip-card-inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		transition: transform 0.8s;
+		transform-style: preserve-3d;
+	}
+
+
+	/* Do an horizontal flip when you move the mouse over the flip box container */
+
+	.fliip-card:hover .fliip-card-inner,
+	.fliip-card:focus-within .fliip-card-inner,
+	.fliip-card:active .fliip-card-inner,
+	.fliip-card:focus .fliip-card-inner {
+		transform: rotateY(180deg);
+	}
+
+
+	/* Position the front and back side */
+
+	.fliip-card-front,
+	.fliip-card-back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		-webkit-backface-visibility: hidden;
+		/* Safari */
+		backface-visibility: hidden;
+	}
+
+
+	/* Style the front side (fallback if image is missing) */
+
+	/* .fliip-card-front {
+		background-color: #008CCC;
+		background-color: azure;
+		color: white;
+		color: black;
+	} */
+
+
+	/* Style the back side */
+
+	.fliip-card-back {
 		transform: rotateY(180deg);
 	}
 
