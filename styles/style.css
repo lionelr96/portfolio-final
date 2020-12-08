@@ -601,8 +601,14 @@ label:hover {
 
 	/* Do an horizontal flip when you move the mouse over the flip box container */
 
-	.fliip-card:hover .fliip-card-inner,
+	/* .fliip-card:hover .fliip-card-inner,
 	.fliip-card:focus-within .fliip-card-inner,
+	.fliip-card:active .fliip-card-inner,
+	.fliip-card:focus .fliip-card-inner {
+		transform: rotateY(180deg);
+	} */
+
+	.fliip-card:hover .fliip-card-inner,
 	.fliip-card:active .fliip-card-inner,
 	.fliip-card:focus .fliip-card-inner {
 		transform: rotateY(180deg);
@@ -637,6 +643,16 @@ label:hover {
 	.fliip-card-back {
 		transform: rotateY(180deg);
 	}
+
+	/* New CSS selector */
+	.fliip-card.focus-within .fliip-card-inner {
+		transform: rotateY(180deg);
+	}
+
+	@media (prefers-reduced-motion) {
+		.fliip-card-inner {
+			transition: transform none;
+		}
 
 }
 
